@@ -1,0 +1,101 @@
+/* 
+======================================================================
+A/B Testing Analysis Dashboard - Custom Styles
+File: dashboards/assets/style.css
+======================================================================
+*/
+
+/* Hide the default Streamlit main menu, header, and footer for a cleaner, professional look */
+#MainMenu {
+    visibility: hidden;
+}
+footer {
+    visibility: hidden;
+}
+header {
+    visibility: hidden;
+}
+
+/* Adjust the main container padding to maximize screen real estate */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1200px;
+}
+
+/* =========================================
+   KPI Metric Cards Styling
+   ========================================= */
+[data-testid="stMetric"] {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Add a subtle hover effect to the KPI cards */
+[data-testid="stMetric"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* KPI Label (e.g., "Total Users") */
+[data-testid="stMetricLabel"] {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* KPI Value (e.g., "45,000") */
+[data-testid="stMetricValue"] {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f77b4; /* Matches Seaborn's default muted blue */
+}
+
+/* KPI Delta (e.g., positive/negative lift) */
+[data-testid="stMetricDelta"] {
+    font-size: 1rem;
+}
+
+/* =========================================
+   Typography & Header Enhancements
+   ========================================= */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Add a subtle bottom border to main page titles */
+h1 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* =========================================
+   Data Table Enhancements
+   ========================================= */
+/* Ensure dataframes stretch cleanly and have a professional border */
+[data-testid="stDataFrame"] {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+/* =========================================
+   Sidebar Styling
+   ========================================= */
+/* Give the sidebar a slightly darker, distinct background */
+[data-testid="stSidebar"] {
+    background-color: #f1f3f5;
+    border-right: 1px solid #dee2e6;
+}
+
+/* Style the sidebar navigation links/text */
+[data-testid="stSidebar"] .css-17lntkn {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #343a40;
+}
